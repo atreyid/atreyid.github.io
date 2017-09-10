@@ -238,3 +238,17 @@ a:hover {
   color: #4178BE;
 }
 
+.profile-picture {
+  width: 50%;
+  height: 600px;
+  float: left;
+  background-image: url("../assets/img/profile-pic.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.profile-text {
+  width: 50%;
+  float: right;
+  padding-left: 15px;
+}
