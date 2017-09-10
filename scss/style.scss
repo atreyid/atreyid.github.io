@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+$bg-color-0: #f8fefe;
+$bg-color-25: #ecf6ff;
+$bg-color-50: #dce6f2;
+$bg-color-75: #bccddd;
+
+$color-0: #8a8a8a;
+$color-25: #747474;
+$color-50: #565656;
+$color-75: #3a3a3a;
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+	animation: bg-change 20s ease-in infinite;
+}
+
+@keyframes bg-change {
+	0%   {background-color: $bg-color-0; color:  $color-0;}
+	25%  {background-color: $bg-color-25; color: $color-25;}
+	50%  {background-color: $bg-color-50; color: $color-50;}
+	75%  {background-color: $bg-color-75; color: $color-75;}
+	100% {background-color: $bg-color-0; color: $color-0;}
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: inherit;
+}
+
+
+nav {
+  width: 100%;
+  background: #3C3E4A;
+  position: fixed;
+  height: 50px;
+  z-index: 19000;
+}
+
+.menu {
+  width: 100%;
+  height: 50px;
+  padding: 0px;
+  line-height: 50px;
+  margin: 0;
+}
+
+.menu > a {
+  display: inline-block;
+  width: 25%;
+  float: left;
+  text-align: center;
+  color: #B5CD60;
+  list-style-type: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.menu > a:hover:not(.selected) {
+	color: #F77A52;
+	transition: color 0.3s ease-in;
+}
+.menu > a.selected {
+  background-color: #262731;
+  color: #F77A52;
+	transition: all 0.3s ease-in;
+}
+
+section.views {
+  text-align: justify;
+  font-size: 16px;
+  padding: 70px 50px 0 50px;
+	line-height: 2em;
+}
+
+.research-topic {
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.research-thumb {
+	float: left;
+	width: 128px;
+	height: 96px;
+	margin: 15px 25px 0 0;
+}
+
+.research-text {
+	font-size: 14px;
+	line-height: 1.5em;
+	color: #747474;
+}
+
+.research-header {
+	font-size: 18px;
+	color: #3a3a3a;
+	text-align: justify;
+	overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: 
+    typing 3.5s steps(40, end);
+	text-align: center;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.photo {
+  width: 20%;
+  position: relative;
+  background: white;
+  box-shadow: inset 0px 0px 50px rgba(0,0,0,0.1),
+              0px 5px 10px rgba(0,0,0,0.25);
+  float: left;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  border-radius: 3px;
+  padding: 10px 10px 10px 10px;
+  transition: all 100ms ease-out;
+  transform: translateZ(0);
+  img {
+    width: 100%;
+    height: auto;
+    position: relative;    
+  }
+  figcaption {
+    font-size: 16px;
+		font-family: Bad Script;
+    text-align: center;
+    color: #565656;
+		visibility: hidden;
+  }
+  
+  @media screen and (max-width: 400px) {
+    width: 90%;
+    transform: rotateZ(0deg) !important;
+    margin: 20px auto 0 auto; 
+    float: none;    
+  }
+  
+  @media screen and (min-width: 401px) {
+    &:hover {
+      transform: rotateZ(0deg) scale(1.2) !important;
+      z-index: 257 !important;
+      box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.1),
+                  0px 0px 29px rgba(0, 0, 0, 0.2);
+    }
+  }  
+  @media screen and (min-width: 401px) and (max-width: 600px) {    
+    width: 50%;    
+  }
+  @media screen and (min-width: 601px) and (max-width: 800px) {    
+    width: 33.3333%;    
+  }
+  @media screen and (min-width: 801px) and (max-width: 1000px) {
+    width: 25%;    
+  }
+  @media screen and (min-width: 1001px) {
+    width: 20%;    
+  }
+	&:hover {
+		figcaption {
+			visibility: visible;
+		}
+	}
+}
+
+.gallery {
+	overflow: hidden;
+}
+
+.contact-img {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background-image: url('https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-512.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+	position: relative;
+	top: 10px;
+	margin-right: 10px;
+}
+
+.contact-medium {
+	margin-bottom: 15px;
+}
+
+.contact-link {
+	animation: fade-in-left 3s;
+}
+
+@keyframes fade-in-left {
+	0% {
+               opacity: 0;
+		transform: translateX(-20px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateX(0);
+            }
+}
+
