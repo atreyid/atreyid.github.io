@@ -128,7 +128,7 @@ section.views {
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
-  animation: typing 3.5s steps(40, end);
+  /* animation: typing 3.5s steps(40, end); */
   text-align: center;
 }
 
